@@ -1,0 +1,307 @@
+/* Global resets/typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Georgia', sans-serif;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* Header / Top Bar */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+  border-bottom: 1px solid #000;
+}
+
+.logo-container {
+  display: flex;
+  align-items: flex-start;
+  
+}
+
+.company-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-right: 10px;
+  align-self: flex-start
+}
+
+.company-name h1 {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  margin-top: 25px;
+  font-weight: normal; 
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+  color: #c1272d;
+}
+
+.search-bar input[type="search"] {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  outline: none;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: auto; /* you can fix a height if you want */
+  overflow: hidden;
+}
+
+.hero-slider {
+  position: relative;
+}
+
+.hero-img {
+  display: none;
+  width: 90%;
+  aspect-ratio: 16 / 8;
+  object-position: center;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.hero-img.active {
+  display: block;
+}
+
+.slide-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255,255,255,0.7);
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  padding: 0 10px;
+  color: #000;
+}
+
+.left-arrow {
+  left: 20px;
+}
+
+.right-arrow {
+  right: 20px;
+}
+
+/* Projects Section */
+.projects-section {
+  padding: 30px 20px;
+}
+
+.projects-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.projects-section hr {
+  border: none;
+  border-bottom: 2px solid #c1272d;
+  width: 60px;
+  margin-bottom: 20px;
+}
+
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card_right {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card_center {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card_right img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-position: right;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.card_center img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-position: center;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.card-title {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 0;
+}
+
+/* About Section */
+.about-section {
+  /* Center text horizontally */
+  text-align: center;
+
+  /* Space around the text so it’s not flush to the edges */
+  padding: 50px 20px;
+
+  /* Optionally, control the maximum width on large screens
+     so text doesn’t stretch too wide */
+  max-width: 800px;
+  margin: 0 auto; /* center the .contact-section if max-width is used */
+
+  /* Add a subtle background (optional) */
+  background-color: #fafafa; 
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Contact headings style */
+.about-section h2 {
+  font-size: 1.8rem; /* or 2rem, up to you */
+  margin-bottom: 1rem;
+  color: #444; /* a softer color than pure black */
+  font-weight: normal; /* optional: if you want a lighter feel */
+}
+
+/* Contact Section */
+/* Contact section wrapper */
+.contact-section {
+  /* Center text horizontally */
+  text-align: center;
+
+  /* Space around the text so it’s not flush to the edges */
+  padding: 50px 20px;
+
+  /* Optionally, control the maximum width on large screens
+     so text doesn’t stretch too wide */
+  max-width: 800px;
+  margin: 0 auto; /* center the .contact-section if max-width is used */
+
+  /* Add a subtle background (optional) */
+  background-color: #fafafa; 
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Contact headings style */
+.contact-section h2 {
+  font-size: 1.8rem; /* or 2rem, up to you */
+  margin-bottom: 1rem;
+  color: #444; /* a softer color than pure black */
+  font-weight: normal; /* optional: if you want a lighter feel */
+}
+
+/* Adjust footer spacing */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #ccc;
+  margin-top: 30px;
+}
+
+
+.contact-menu {
+  display: flex;
+  gap: 10px;
+}
+
+.contact-menu button {
+  padding: 10px 20px;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.contact-menu button.active {
+  background-color: #c1272d;
+  color: #fff;
+}
+
+.locations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.location-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 320px;
+  background-color: #fff;
+}
+
+.location-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.office-info h5 {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.directions-btn {
+  margin-top: 5px;
+  padding: 5px 10px;
+  background-color: #c1272d;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #ccc;
+  margin-top: 30px;
+}
+
+main {
+  flex: 1;                   /* grow/shrink to fill space between header & footer */
+  display: flex;
+  align-items: center;       /* vertically center children */
+  justify-content: center;   /* horizontally center children */
+  /* optional: if you want a tiny gap from the header, you can add:
+     margin-top: 1rem;
+  */
+}

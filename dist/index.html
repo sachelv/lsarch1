@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>LS Architecture, LLC.</title>
+    <style>
+      /* Force html/body to stretch to full screen height */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      /* Use flex layout on body to push footer down if content is short */
+      body {
+        display: flex;
+        flex-direction: column; /* vertical stacking: header, main, footer */
+      }
+      /* The <main> grows/shrinks to fill leftover space, ensuring footer is at bottom */
+      main {
+        flex: 1 0 auto;
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/main-uGGhrMjf.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/style-T9G6DQCQ.css">
+  </head>
+
+  <body>
+    <header>
+      <!-- Your header / nav content -->
+      <div class="top-bar">
+        <div class="logo-container">
+          <img
+            src="/images/LSA Logo.png"
+            alt="Company Logo"
+            class="company-logo"
+          />
+          <div class="company-name">
+            <h1>LS Architecture, LLC.</h1>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Wrap the main page content in <main> -->
+    <main>
+      <!-- Hero / Slideshow (Only on Home page, for example) -->
+      <section class="hero">
+        <div class="hero-slider">
+          <img
+            src="/images/muckleshoot1.png"
+            alt="Hero Image 1"
+            class="hero-img active"
+          />
+          <img
+            src="/images/Primrose4.jpg"
+            alt="Hero Image 2"
+            class="hero-img"
+          />
+          <img
+            src="/images/Wandacity1.png"
+            alt="Hero Image 3"
+            class="hero-img"
+          />
+          <img
+            src="/images/Oaklawn2.jpg"
+            alt="Hero Image 4"
+            class="hero-img"
+          />
+          <img
+            src="/images/resortsworld1.jpg"
+            alt="Hero Image 5"
+            class="hero-img"
+          />
+          <img
+            src="/images/Tanager1.png"
+            alt="Hero Image 6"
+            class="hero-img"
+          />
+          <img
+            src="/images/parkmgmlobby3.jpg"
+            alt="Hero Image 7"
+            class="hero-img"
+          />
+          <!-- Navigation arrows -->
+          <button id="prevSlide" class="slide-arrow left-arrow">&#10094;</button>
+          <button id="nextSlide" class="slide-arrow right-arrow">&#10095;</button>
+        </div>
+      </section>
+    </main>
+    <!-- Footer stays at bottom if content is short -->
+    <footer>
+      <p>© LS Architecture LLC. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

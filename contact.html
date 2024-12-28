@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>LS Architecture, LLC.</title>
+    <link rel="stylesheet" href="/src/style.css" />
+    <style>
+      /* Force html/body to stretch to full screen height */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      /* Use flex layout on body to push footer down if content is short */
+      body {
+        display: flex;
+        flex-direction: column; /* vertical stacking: header, main, footer */
+      }
+      /* The <main> grows/shrinks to fill leftover space, ensuring footer is at bottom */
+      main {
+        flex: 1 0 auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <!-- Your header / nav content -->
+      <div class="top-bar">
+        <div class="logo-container">
+          <img
+            src="/images/LSA Logo.png"
+            alt="Company Logo"
+            class="company-logo"
+          />
+          <div class="company-name">
+            <h1>LS ARCHITECTURE, LLC.</h1>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Wrap the main page content in <main> -->
+    <main>
+      <!-- For example, in contact.html: -->
+      <section class="contact-section">
+        <h2>Contact me at:</h2>
+        <h2>lei@lsarchdesign.com</h2>
+        <h2>702.232.9816</h2>
+      </section>
+    </main>
+
+    <!-- Footer stays at bottom if content is short -->
+    <footer>
+      <p>© LS Architecture LLC. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
