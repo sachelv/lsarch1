@@ -1,5 +1,22 @@
-/* Example: For screens 600px wide or less */
-@media (max-width: 1500) {
+/* By default, hide the short name; show the long name */
+.long_name {
+  display: inline;
+}
+.short_name {
+  display: none;
+}
+
+/* At or below 1500px, hide the long name & show the short name */
+@media (max-width: 1500px) {
+  .long-name {
+    display: none;
+  }
+  .short-name {
+    display: inline;
+  }
+}
+/* Example: For screens 1500px wide or less */
+@media (max-width: 1500px) {
   /* Shrink the logo */
   .company-logo {
     width: 60px;
@@ -16,6 +33,7 @@
   /* Make nav links smaller or spaced differently */
   .main-nav ul {
     gap: 15px; /* or less gap so they don't wrap onto two lines */
+    font-size: 1.4rem;
   }
 
   .main-nav ul li a {
@@ -62,7 +80,6 @@ body {
 .company-name h1 {
   font-size: 2rem;
   letter-spacing: 1px;
-  margin-top: 25px;
   font-weight: normal; 
 }
 
