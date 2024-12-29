@@ -1,22 +1,5 @@
-/* By default, hide the short name; show the long name */
-.long_name {
-  display: inline;
-}
-.short_name {
-  display: none;
-}
-
-/* At or below 1500px, hide the long name & show the short name */
-@media (max-width: 1500px) {
-  .long-name {
-    display: none;
-  }
-  .short-name {
-    display: inline;
-  }
-}
 /* Example: For screens 1500px wide or less */
-@media (max-width: 1500px) {
+@media (max-width: 1500) {
   /* Shrink the logo */
   .company-logo {
     width: 60px;
@@ -80,6 +63,7 @@ body {
 .company-name h1 {
   font-size: 2rem;
   letter-spacing: 1px;
+  margin-top: 25px;
   font-weight: normal; 
 }
 
