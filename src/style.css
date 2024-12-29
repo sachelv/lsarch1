@@ -1,3 +1,28 @@
+/* Example: For screens 600px wide or less */
+@media (max-width: 1500) {
+  /* Shrink the logo */
+  .company-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* Shrink the main heading */
+  .company-name h1 {
+    font-size: 1.4rem;
+    /* optional: no-wrap so it tries to stay on one line */
+    white-space: nowrap;
+  }
+
+  /* Make nav links smaller or spaced differently */
+  .main-nav ul {
+    gap: 15px; /* or less gap so they don't wrap onto two lines */
+  }
+
+  .main-nav ul li a {
+    font-size: 1rem;
+  }
+}
+
 /* Global resets/typography */
 * {
   margin: 0;
@@ -35,7 +60,7 @@ body {
 }
 
 .company-name h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   letter-spacing: 1px;
   margin-top: 25px;
   font-weight: normal; 
@@ -81,7 +106,8 @@ body {
 
 .hero-img {
   display: none;
-  width: 90%;
+  width: 80%;
+  /* height: 80%; */
   aspect-ratio: 16 / 8;
   object-position: center;
   object-fit: cover;
