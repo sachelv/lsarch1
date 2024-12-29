@@ -15,7 +15,7 @@
 
   /* Make nav links smaller or spaced differently */
   .main-nav ul {
-    gap: 15px; /* or less gap so they don't wrap onto two lines */
+    gap: 8px; /* or less gap so they don't wrap onto two lines */
     font-size: 1.4rem;
   }
 
