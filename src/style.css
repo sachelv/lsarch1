@@ -129,7 +129,7 @@ body {
 
 .projects-section hr {
   border: none;
-  border-bottom: 2px solid #084a1f;
+  border-bottom: 2px solid #04722b;
   width: 60px;
   margin-bottom: 20px;
 }
@@ -185,7 +185,7 @@ body {
   text-align: center;
 
   /* Space around the text so it’s not flush to the edges */
-  padding: 50px 20px;
+  padding: 20px 20px;
 
   /* Optionally, control the maximum width on large screens
      so text doesn’t stretch too wide */
@@ -193,9 +193,7 @@ body {
   margin: 0 auto; /* center the .contact-section if max-width is used */
 
   /* Add a subtle background (optional) */
-  background-color: #fafafa; 
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+  border: 2px solid #ccc;
 }
 
 /* Contact headings style */
@@ -208,12 +206,25 @@ body {
 
 /* Contact Section */
 /* Contact section wrapper */
-.contact-section {
+
+.contact-container {
+  display: flex;
+  width: 100%;
+}
+
+.left-image {
+  width: 600px;
+  object-fit: contain;
+  margin-right: 10px;
+  align-self: flex-start
+}
+
+.right-content {
   /* Center text horizontally */
-  text-align: center;
+  text-align: left;
 
   /* Space around the text so it’s not flush to the edges */
-  padding: 50px 20px;
+  padding: 20px 20px;
 
   /* Optionally, control the maximum width on large screens
      so text doesn’t stretch too wide */
@@ -221,12 +232,10 @@ body {
   margin: 0 auto; /* center the .contact-section if max-width is used */
 
   /* Add a subtle background (optional) */
-  background-color: #fafafa; 
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+  border: 2px solid #ccc;
 }
 
-/* Contact headings style */
+/* Contact headings style */ 
 .contact-section h2 {
   font-size: 1.8rem; /* or 2rem, up to you */
   margin-bottom: 1rem;
@@ -318,7 +327,10 @@ main {
   flex-direction: column;
 
   /* Background image here */
-  /* background: url("/images/PLACEHOLDERbackground.jpg") no-repeat center center; */
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.85), /* Adjust the 0.9 value to control transparency */ 
+    rgba(255, 255, 255, 0.85)
+  ), url("/images/R&G restaurant.jpg") no-repeat center center;
   background-size: cover;
   background-position: center;
   background-attachment: scroll; /* or “fixed” if you prefer, but watch for mobile bugs */
@@ -442,11 +454,10 @@ body {
   }
   .about-section.mobile-only {
     padding: 20px;
-    background-color: #fafafa;
   }
   .about-section.mobile-only h2 {
-    font-size: 1rem; /* Smaller font size on mobile */
-    line-height: 1.2;
+    font-size: 0.7rem; /* Smaller font size on mobile */
+    line-height: 1;
     margin-bottom: 0;
   }
 
