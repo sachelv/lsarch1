@@ -466,7 +466,7 @@ body {
 
 /* Each column is half-ish width */
 .left-block {
-  width: 55%;
+  width: 50%;
 }
 .right-block {
   width: 45%
