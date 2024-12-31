@@ -375,18 +375,31 @@ body {
   transition: all 0.3s ease;
 }
 
+.services-head {
+  text-align: center;
+}
+.services-head h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.services {
+  width: 95vw;
+  margin: 0 auto; /* This centers it horizontally if parent is wider */
+}
+
 /* The outer container that forms the angled shape */
 .services-shape {
   margin: 0 auto;
-  width: 95%;
+  width: 100%;
   padding: 0rem;
-  border: 1px solid #000;
+  border: 0px solid #000;
 
   /* Angled top-right shape. Adjust as needed to match your screenshot exactly. */
   clip-path: polygon(
     0% 0%,    /* top-left corner */
-    80% 0%,   /* near top-right */
-    100% 15%, /* angled top-right corner */
+    40% 0%,   /* near top-right */
+    100% 25%, /* angled top-right corner */
     100% 100%,/* bottom-right corner */
     0% 100%   /* bottom-left corner */
   );
@@ -410,12 +423,16 @@ body {
   font-weight: bold;
   margin-bottom: 0rem;
   margin-top: 0.5rem;
-  font-size: 0.60rem;
+  font-size: 0.62rem;
 }
 
 /* Stagger the lower-right content down */
-.right-block .lower-right {
+.right-block .upper-right {
   margin-top: 4rem; /* push Tenant Improvement further down */
+}
+
+.right-block .lower-right {
+  margin-top: 3rem; /* push Tenant Improvement further down */
 }
 
 .left-block .lower-left {
@@ -427,7 +444,7 @@ body {
   list-style: disc;
   margin-left: 1rem;
   margin-bottom: 0.6rem;
-  font-size: 0.60rem;
+  font-size: 0.62rem;
 }
 
 @media (max-width: 768px) {
