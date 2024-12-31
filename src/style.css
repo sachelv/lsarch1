@@ -1,5 +1,8 @@
-
 /* Global resets/typography */
+.mobile-only {
+  display: none !important;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -82,7 +85,7 @@ body {
 
 .hero-img {
   display: none;
-  width: 80%;
+  width: 75%;
   /* height: 80%; */
   aspect-ratio: 16 / 8;
   object-position: center;
@@ -126,7 +129,7 @@ body {
 
 .projects-section hr {
   border: none;
-  border-bottom: 2px solid #c1272d;
+  border-bottom: 2px solid #084a1f;
   width: 60px;
   margin-bottom: 20px;
 }
@@ -295,7 +298,7 @@ footer {
   text-align: center;
   padding: 20px 0;
   border-top: 1px solid #ccc;
-  margin-top: 30px;
+  margin-top: 0px;
 }
 
 main {
@@ -311,9 +314,11 @@ main {
 main {
   /* Let it flex to fill space between header and footer */
   flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
 
   /* Background image here */
-  background: url("/images/WhiteVilla1.png") no-repeat center center;
+  /* background: url("/images/PLACEHOLDERbackground.jpg") no-repeat center center; */
   background-size: cover;
   background-position: center;
   background-attachment: scroll; /* or “fixed” if you prefer, but watch for mobile bugs */
@@ -323,7 +328,7 @@ main {
   /* padding-top: 1rem; */
 
   /* A fallback color in case the image doesn’t load */
-  background-color: #ccc;
+  background-color: #FFFFFF;
 }
 
 
@@ -424,4 +429,24 @@ body {
     font-size: 1rem !important;
     white-space: nowrap !important;
   }
+
+  .mobile-only{
+    display: block
+  }
+  .hero {
+    margin-bottom: 20px;
+  }
+  .hero-img {
+    width: 100%;
+  }
+  .about-section.mobile-only {
+    padding: 20px;
+    background-color: #fafafa;
+  }
+  .about-section.mobile-only h2 {
+    font-size: 0.5rem; /* Smaller font size on mobile */
+    line-height: 1.2;
+    margin-bottom: 0;
+  }
+
 }
