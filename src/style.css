@@ -1,5 +1,5 @@
 /* Example: For screens 1500 wide or less */
-@media (max-width: 1500) {
+@media (max-width: 768px) {
   /* Hide regular nav and show hamburger */
   .hamburger {
     display: block;
