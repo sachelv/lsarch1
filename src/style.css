@@ -445,7 +445,7 @@ body {
     background-color: #fafafa;
   }
   .about-section.mobile-only h2 {
-    font-size: 0.7rem; /* Smaller font size on mobile */
+    font-size: 1rem; /* Smaller font size on mobile */
     line-height: 1.2;
     margin-bottom: 0;
   }
