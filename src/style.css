@@ -586,6 +586,8 @@ body {
     width: 100%;
   }
   .about-section {
+    margin-top: 10px;
+    margin-bottom: 10px;
     width: 90%
   }
   .about-section h2 {
