@@ -1,26 +1,49 @@
 /* Example: For screens 1500px wide or less */
-@media (max-width: 1500) {
-  /* Shrink the logo */
+@media (max-width: 1500px) {
+  /* Hide regular nav and show hamburger */
+  .main-nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #000;
+  }
+
+  .main-nav.active ul {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  /* Animate hamburger to X when active */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+
+  /* Existing mobile styles */
   .company-logo {
     width: 60px;
     height: 60px;
   }
 
-  /* Shrink the main heading */
   .company-name h1 {
     font-size: 1.4rem;
-    /* optional: no-wrap so it tries to stay on one line */
     white-space: nowrap;
-  }
-
-  /* Make nav links smaller or spaced differently */
-  .main-nav ul {
-    gap: 8px; /* or less gap so they don't wrap onto two lines */
-    font-size: 1.4rem;
-  }
-
-  .main-nav ul li a {
-    font-size: 1rem;
   }
 }
 
@@ -331,4 +354,52 @@ main {
   /* optional: if you want a tiny gap from the header, you can add:
      margin-top: 1rem;
   */
+}
+
+main {
+  /* Let it flex to fill space between header and footer */
+  flex: 1 0 auto;
+
+  /* Background image here */
+  background: url("/images/WhiteVilla1.png") no-repeat center center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll; /* or “fixed” if you prefer, but watch for mobile bugs */
+
+  /* If you want some spacing above the background so it doesn't hide behind the header, 
+     you can add padding-top. If not needed, omit this. */
+  /* padding-top: 1rem; */
+
+  /* A fallback color in case the image doesn’t load */
+  background-color: #ccc;
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Add hamburger menu styles */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+  background: none;
+  border: none;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  margin: 5px 0;
+  transition: all 0.3s ease;
 }

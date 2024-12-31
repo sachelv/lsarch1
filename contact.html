@@ -38,6 +38,11 @@
           </div>
         </div>
         <nav class="main-nav">
+          <button class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
           <ul>
             <li><a href="index.html">HOME</a></li>
             <li><a href="projects.html">PROJECTS</a></li>
@@ -62,5 +67,14 @@
     <footer>
       <p>© LS Architecture LLC. All rights reserved.</p>
     </footer>
+    <script>
+      const hamburger = document.querySelector('.hamburger');
+      const nav = document.querySelector('.main-nav');
+
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        nav.classList.toggle('active');
+      });
+    </script>
   </body>
 </html>
