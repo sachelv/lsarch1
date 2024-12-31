@@ -220,19 +220,26 @@ body {
 }
 
 .right-content {
-  /* Center text horizontally */
-  text-align: left;
+  display: flex;             /* Turn on flex layout */
+  flex-direction: column;    /* Stack the heading lines vertically */
+  justify-content: center;   /* Vertically center the column */
+  align-items: flex-start;   /* Align text to the left (or center if you want) */
 
-  /* Space around the text so it’s not flush to the edges */
+  text-align: left;          /* Ensures left-aligned text */
   padding: 20px 20px;
-
-  /* Optionally, control the maximum width on large screens
-     so text doesn’t stretch too wide */
   max-width: 800px;
-  margin: 0 auto; /* center the .contact-section if max-width is used */
-
-  /* Add a subtle background (optional) */
+  margin: 0 auto;
   border: 2px solid #ccc;
+}
+
+.right-content h2:first-of-type {
+  font-weight: bold;
+  font-size: 2.2rem;
+}
+
+.right-content h2 {
+  font-weight: bold !important;
+  font-size: 2rem;
 }
 
 /* Contact headings style */ 
@@ -452,13 +459,30 @@ body {
   .hero-img {
     width: 100%;
   }
+  .about-section h2 {
+    font-size: 1.2rem !important;
+  }
   .about-section.mobile-only {
     padding: 20px;
   }
   .about-section.mobile-only h2 {
-    font-size: 0.7rem; /* Smaller font size on mobile */
-    line-height: 1;
+    font-size: 1rem; /* Smaller font size on mobile */
+    line-height: 1.2;
     margin-bottom: 0;
   }
 
+  .contact-container {
+    flex-direction: column;  /* stack vertically */
+    align-items: center;     /* center them horizontally if desired */
+  }
+  .left-image {
+    width: 100% !important;  /* let the image take full width on mobile */
+    margin-right: 0 !important;
+    max-width: none;         /* remove any fixed widths */
+  }
+  .right-content {
+    width: 100% !important;  /* also full width */
+    margin-top: 20px;        /* spacing above the contact text */
+    align-items: flex-start; /* or center, up to you */
+  }
 }
