@@ -379,18 +379,27 @@ body {
     display: none !important;
     position: absolute;
     top: 100%;
-    left: 0;
     right: 0;
     background-color: white;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    border-bottom: 1px solid #000;
     z-index: 1000;
   }
 
   .main-nav.active ul {
-    display: flex;
+    display: flex !important;
+  }
+
+  .main-nav ul li {
+    margin: 0px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Ensure the nav container is properly positioned */
+  .main-nav {
+    position: relative;
   }
   /* Animate hamburger to X when active */
   .hamburger.active span:nth-child(1) {
