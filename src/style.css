@@ -2,6 +2,9 @@
 .mobile-only {
   display: none !important;
 }
+.computer-only{
+  display: block !important;
+}
 
 * {
   margin: 0;
@@ -129,7 +132,7 @@ body {
 
 .projects-section hr {
   border: none;
-  border-bottom: 2px solid #04722b;
+  border-bottom: 2px solid #206905;
   width: 60px;
   margin-bottom: 20px;
 }
@@ -184,7 +187,7 @@ body {
   /* Center text horizontally */
   text-align: center;
   padding: 20px 20px;
-  max-width: 1200px;
+  width: 80%;
   margin: 0 auto; /* center the .contact-section if max-width is used */
   /* Add a subtle background (optional) */
   border: 2px solid #ccc;
@@ -196,6 +199,52 @@ body {
   margin-bottom: 1rem;
   color: #444; /* a softer color than pure black */
   font-weight: normal; /* optional: if you want a lighter feel */
+}
+
+.servicesa {
+  width: 90%;
+}
+
+.servicesa-head {
+  text-align: center;
+}
+.servicesa-head h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.servicesa-head hr {
+  border: none;
+  border-bottom: 2px solid #206905;
+  width: 40px;
+  margin-bottom: 0px;
+}
+
+.servicesa .servicesa-shape {
+  display: flex;
+  justify-content: space-between; /* Space between the blocks */
+  flex-wrap: nowrap; /* Allow wrapping for smaller screens */
+  gap: 0px; /* Add spacing between the blocks */
+  padding: 0px;
+}
+
+.servicesa .servicesa-block {
+  flex: 1 1 calc(25% - 5px); /* Adjust width for 4 blocks with gap */
+  box-sizing: border-box;
+  /* background-color: #f9f9f9; Optional: Add background for visibility */
+  /* border: 1px solid #ccc; Optional: Add border */
+  padding: 5px;
+  text-align: center; /* Center content inside each block */
+}
+.servicesa .servicesa-block ul {
+  list-style: none; /* Remove bullets */
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
+  font-size: 1.1rem;
+  font-weight:400;
+}
+
+.servicesa .servicesa-block h3 {
+  font-size: 1.4rem;
 }
 
 /* Contact Section */
@@ -229,21 +278,21 @@ body {
 
 .right-content h2:first-of-type {
   font-weight: bold;
-  font-size: 2.2rem;
+  font-size: 2rem;
+  margin-bottom: 0px;
+}
+.right-content hr {
+  border: none;
+  border-bottom: 2px solid #206905;
+  width: 100px;
+  margin-bottom: 20px;
 }
 
 .right-content h2 {
   font-weight: bold !important;
-  font-size: 2rem;
+  font-size: 1.8rem !important;
 }
 
-/* Contact headings style */ 
-.contact-section h2 {
-  font-size: 1.8rem; /* or 2rem, up to you */
-  margin-bottom: 1rem;
-  color: #444; /* a softer color than pure black */
-  font-weight: normal; /* optional: if you want a lighter feel */
-}
 
 /* Adjust footer spacing */
 footer {
@@ -330,8 +379,8 @@ main {
 
   /* Background image here */
   background: linear-gradient(
-    rgba(255, 255, 255, 0.85), /* Adjust the 0.9 value to control transparency */ 
-    rgba(255, 255, 255, 0.85)
+    rgba(255, 255, 255, 0.87), /* Adjust the 0.9 value to control transparency */ 
+    rgba(255, 255, 255, 0.87)
   ), url("/images/R&G restaurant.jpg") no-repeat center center;
   background-size: cover;
   background-position: center;
@@ -382,7 +431,12 @@ body {
   font-size: 1.2rem;
   font-weight: bold;
 }
-
+.services-head hr {
+  border: none;
+  border-bottom: 2px solid #206905;
+  width: 60px;
+  margin-bottom: 0px;
+}
 .services {
   width: 95vw;
   margin: 0 auto; /* This centers it horizontally if parent is wider */
@@ -398,7 +452,7 @@ body {
   /* Angled top-right shape. Adjust as needed to match your screenshot exactly. */
   clip-path: polygon(
     0% 0%,    /* top-left corner */
-    40% 0%,   /* near top-right */
+    100% 0%,   /* near top-right */
     100% 25%, /* angled top-right corner */
     100% 100%,/* bottom-right corner */
     0% 100%   /* bottom-left corner */
@@ -412,10 +466,10 @@ body {
 
 /* Each column is half-ish width */
 .left-block {
-  width: 38%;
+  width: 55%;
 }
 .right-block {
-  width: 62%
+  width: 45%
 }
 
 /* Make sub-headings bold with a bit of spacing */
@@ -423,31 +477,35 @@ body {
   font-weight: bold;
   margin-bottom: 0rem;
   margin-top: 0.5rem;
-  font-size: 0.62rem;
+  font-size: 0.75rem;
 }
 
 /* Stagger the lower-right content down */
+/*
 .right-block .upper-right {
-  margin-top: 4rem; /* push Tenant Improvement further down */
+  margin-top: 4rem;
 }
-
 .right-block .lower-right {
-  margin-top: 3rem; /* push Tenant Improvement further down */
+  margin-top: 3rem;
 }
-
+*
 .left-block .lower-left {
-  margin-top: 3rem; /* push Tenant Improvement further down */
+  margin-top: 1 rem;
 }
+*/
 
 /* Basic bullet styling */
 .services-block ul {
   list-style: disc;
   margin-left: 1rem;
   margin-bottom: 0.6rem;
-  font-size: 0.62rem;
+  font-size: 0.75rem;
 }
 
 @media (max-width: 768px) {
+  .computer-only {
+    display: none !important;
+  }
   /* Hide regular nav and show hamburger */
   .hamburger {
     display: block !important;
@@ -526,6 +584,9 @@ body {
   }
   .hero-img {
     width: 100%;
+  }
+  .about-section {
+    width: 90%
   }
   .about-section h2 {
     font-size: 1.2rem !important;
