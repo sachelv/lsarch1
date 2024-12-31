@@ -431,7 +431,7 @@ body {
   }
 
   .mobile-only{
-    display: block
+    display: block;
   }
   .hero {
     margin-bottom: 20px;
