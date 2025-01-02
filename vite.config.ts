@@ -7,7 +7,8 @@ export default defineConfig({
         main: 'index.html',
         about: 'about.html',
         projects: 'projects.html',
-        contact: 'contact.html'
+        contact: 'contact.html',
+        randglounge: 'randglounge.html'
       }
     }
   }
