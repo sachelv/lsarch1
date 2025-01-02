@@ -61,24 +61,60 @@
         <h2>PROJECTS</h2>
         <hr />
         <div class="project-cards">
-          <div class="card_right">
-            <img src="/images/muckleshoot2.png" alt="Hotels" />
-            <div class="card-title">HOTELS</div>
+          <!-- RESTAURANTS -->
+          <div class="card_container">
+            <div class="card_center">
+              <img src="/images/japanese1.png" alt="Restaurants" />
+              <div class="card-title">RESTAURANTS</div>
+            </div>
+            <!-- Overlaid submenu -->
+            <div class="submenu hidden">
+              <a href="R&Glounge.html">R&G Lounge</a>
+              <a href="izumisteakhouse.html">Izumi Steakhouse</a>
+              <a href="breakfastjunkies.html">Breakfast Junkies</a>
+            </div>
           </div>
-          <div class="card_center">
-            <img src="/images/japanese1.png" alt="Restaurants" />
-            <div class="card-title">RESTAURANTS</div>
+      
+          <!-- INDUSTRIAL -->
+          <div class="card_container">
+            <div class="card_center">
+              <img src="/images/warehousepost2.jpg" alt="Industrial" />
+              <div class="card-title">INDUSTRIAL</div>
+            </div>
+            <div class="submenu hidden">
+              <a href="industrial1.html">Industrial Gallery 1</a>
+              <a href="industrial2.html">Industrial Gallery 2</a>
+              <a href="industrial3.html">Industrial Gallery 3</a>
+            </div>
           </div>
-          <div class="card_center">
-            <img src="/images/warehousepost2.jpg" alt="Industrial" />
-            <div class="card-title">INDUSTRIAL</div>
+      
+          <!-- PUBLIC SECTOR -->
+          <div class="card_container">
+            <div class="card_center">
+              <img src="/images/lvccc1.jpg" alt="Public Sector" />
+              <div class="card-title">RESIDENTIAL</div>
+            </div>
+            <div class="submenu hidden">
+              <a href="public1.html">Public Gallery 1</a>
+              <a href="public2.html">Public Gallery 2</a>
+              <a href="public3.html">Public Gallery 3</a>
+            </div>
           </div>
-          <div class="card_center">
-            <img src="/images/lvccc1.jpg" alt="Public Sector" />
-            <div class="card-title">PUBLIC SECTOR</div>
+      
+          <!-- CUSTOM HOMES -->
+          <div class="card_container">
+            <div class="card_center">
+              <img src="/images/muckleshoot2.png" alt="Hotels" />
+              <div class="card-title">COMMUNITY</div>
+            </div>
+            <div class="submenu hidden">
+              <a href="homes1.html">Custom Homes Gallery 1</a>
+              <a href="homes2.html">Custom Homes Gallery 2</a>
+              <a href="homes3.html">Custom Homes Gallery 3</a>
+            </div>
           </div>
         </div>
-      </section>
+      </section>      
     </main>
 
     <!-- Footer stays at bottom if content is short -->
@@ -92,6 +128,25 @@
       hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
         nav.classList.toggle('active');
+      });
+      const cardContainers = document.querySelectorAll('.card_container');
+      cardContainers.forEach((container) => {
+        container.addEventListener('click', (e) => {
+          // Stop click from propagating if you need to
+          e.stopPropagation();
+
+          // Find that card's submenu
+          const submenu = container.querySelector('.submenu');
+          submenu.classList.toggle('hidden');
+        }); 
+      });
+      // (Optional) If you want to close the submenu when clicking outside:
+      document.addEventListener('click', () => {
+        // Hide all submenus
+        cardContainers.forEach(container => {
+          const submenu = container.querySelector('.submenu');
+          submenu.classList.add('hidden');
+        });
       });
     </script>
   </body>
