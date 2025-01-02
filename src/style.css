@@ -830,7 +830,7 @@ body {
 /************************************************************/
 /*          RESPONSIVE ADJUSTMENTS (IF NEEDED)              */
 /************************************************************/
-@media (max-width: 900px) {
+@media (max-width: 1500px) {
   .gallery-page-container-2 {
     flex-direction: column; /* stack columns on smaller screens */
   }
@@ -839,6 +839,7 @@ body {
   .right-column-2 {
     flex: none;
     width: 100%;
+    margin-left: 0;
   }
 
   /* .hero-slideshow-2 {
