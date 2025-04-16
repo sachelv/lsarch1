@@ -8,7 +8,13 @@ export default defineConfig({
         about: 'about.html',
         projects: 'projects.html',
         contact: 'contact.html',
-        randglounge: 'randglounge.html'
+        randglounge: 'randglounge.html',
+        thelabstudio: 'thelabstudio.html',
+        Ibrowsplus: 'Ibrowsplus.html',
+        barber2024: 'barber2024.html',
+        izumisteakhouse: 'izumisteakhouse.html',
+        hibachirestaurant: 'hibachirestaurant.html',
+        terrarossa: 'terrarossa.html',
       }
     }
   }
