@@ -48,19 +48,38 @@ body {
   font-weight: normal; 
 }
 
+.main-nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
 .main-nav ul {
   list-style: none;
   display: flex;
-  gap: 40px;
-  font-size: 1.2rem;
-  font-weight: lighter;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.2rem; /* Doubled font size */
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav ul li {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .main-nav ul li a {
   text-decoration: none;
   color: #000;
   font-weight: bold;
-  transition: color 0.3s ease;
+  padding: 0.5rem;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .main-nav ul li a:hover {
@@ -377,13 +396,13 @@ main {
   ), url("/images/R&G restaurant.jpg") no-repeat center center;
   background-size: cover;
   background-position: center;
-  background-attachment: scroll; /* or “fixed” if you prefer, but watch for mobile bugs */
+  background-attachment: scroll; /* or "fixed" if you prefer, but watch for mobile bugs */
 
   /* If you want some spacing above the background so it doesn't hide behind the header, 
      you can add padding-top. If not needed, omit this. */
   /* padding-top: 1rem; */
 
-  /* A fallback color in case the image doesn’t load */
+  /* A fallback color in case the image doesn't load */
   background-color: #FFFFFF;
 }
 
@@ -621,8 +640,8 @@ body {
   position: absolute;
   top: 0;              /* Align top edge with container */
   left: 0;             /* Align left edge with container */
-  width: 100%;         /* Fill the container’s width */
-  height: 97.6%;        /* Fill the container’s height */
+  width: 100%;         /* Fill the container's width */
+  height: 97.6%;        /* Fill the container's height */
   display: flex;       /* Use flex to center content or align it easily */
   flex-direction: column;
   justify-content: center;
@@ -681,7 +700,7 @@ body {
   flex-direction: column;
   align-items: center;
   /* optionally set a min-height and scroll the entire column
-     but we’ll only scroll images below */
+     but we'll only scroll images below */
 }
 
 /************************************************************/
@@ -798,9 +817,9 @@ body {
   overflow-y: auto;        /* vertical scroll */
   /* If you want the scroll container to fill leftover space, do:
      flex: 1;
-     But we’ll fix a max-height for a stable layout: */
+     But we'll fix a max-height for a stable layout: */
   max-height: 70vh;        /* adjust as needed */
-  padding-right: 5px;      /* optional spacing so scrollbar won’t overlap content */
+  padding-right: 5px;      /* optional spacing so scrollbar won't overlap content */
 }
 
 .vertical-scroll-container-2 img {
@@ -849,4 +868,97 @@ body {
   .gallery-page-text-2 h1 {
     font-size: 1.6rem;
   }
+}
+
+/* NEW PROJECT PAGE LAYOUTS */
+.project-category {
+  margin-bottom: 40px;
+}
+
+.category-title {
+  color: #000000;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.project-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.project-card {
+  text-decoration: none;
+  color: inherit;
+  width: 190px;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-image {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.card-image img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+.card-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.project-name {
+  color: #000000;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .project-row {
+    justify-content: center;
+  }
+  
+  .project-card {
+    width: 160px;
+  }
+  
+  .main-nav ul {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .category-title {
+    text-align: center;
+  }
+  
+  .project-card {
+    width: 140px;
+  }
+}
+
+/* Hide card labels */
+.card-label {
+  display: none;
 }
