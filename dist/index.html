@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LS Architecture, LLC.</title>
     <style>
       /* Force html/body to stretch to full screen height */
@@ -20,8 +21,8 @@
         flex: 1 0 auto;
       }
     </style>
-    <script type="module" crossorigin src="/assets/main-uGGhrMjf.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/style-T9G6DQCQ.css">
+    <script type="module" crossorigin src="/assets/main-SVmSaGEy.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/style-BCVZrWDX.css">
   </head>
 
   <body>
@@ -30,7 +31,7 @@
       <div class="top-bar">
         <div class="logo-container">
           <img
-            src="/images/LSA Logo.png"
+            src="/images/shared/LSA Logo.png"
             alt="Company Logo"
             class="company-logo"
           />
@@ -39,6 +40,11 @@
           </div>
         </div>
         <nav class="main-nav">
+          <button class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
           <ul>
             <li><a href="index.html">HOME</a></li>
             <li><a href="projects.html">PROJECTS</a></li>
@@ -55,37 +61,27 @@
       <section class="hero">
         <div class="hero-slider">
           <img
-            src="/images/muckleshoot1.png"
+            src="/images/home/Primrose4.jpg"
             alt="Hero Image 1"
             class="hero-img active"
           />
           <img
-            src="/images/Primrose4.jpg"
+            src="/images/home/Warehouse1.jpg"
             alt="Hero Image 2"
             class="hero-img"
           />
           <img
-            src="/images/Wandacity1.png"
+            src="/images/home/Wandacity1.png"
             alt="Hero Image 3"
             class="hero-img"
           />
           <img
-            src="/images/Oaklawn2.jpg"
-            alt="Hero Image 4"
-            class="hero-img"
-          />
-          <img
-            src="/images/resortsworld1.jpg"
+            src="/images/home/resortsworld1.jpg"
             alt="Hero Image 5"
             class="hero-img"
           />
           <img
-            src="/images/Tanager1.png"
-            alt="Hero Image 6"
-            class="hero-img"
-          />
-          <img
-            src="/images/parkmgmlobby3.jpg"
+            src="/images/home/signagerender.png"
             alt="Hero Image 7"
             class="hero-img"
           />
@@ -94,10 +90,75 @@
           <button id="nextSlide" class="slide-arrow right-arrow">&#10095;</button>
         </div>
       </section>
+      <section class="services-head mobile-only">
+        <h2>Services</h2>
+        <hr>
+      </section>
+      <section class="services mobile-only">
+        <div class="services-shape">
+          <!-- Left column -->
+          <article class="services-block left-block">
+            <h3>Planning</h3>
+            <ul>
+              <li>Land Planning</li>
+              <li>Zoning Package</li>
+              <li>Site Analysis</li>
+              <li>Feasibility Studies</li>
+              <li>Infrastructure Assessment</li>
+            </ul>
+            
+            <div class = "lower-left">
+              <h3>Construction Administration</h3>
+              <ul>
+                <li>Communication and Negotiation with GC</li>
+                <li>Review Submittals and Shop Drawings</li>
+                <li>Respond to RFIs</li>
+                <li>Manage Change Orders</li>
+                <li>Visit Job Sites, Attend OAC Meetings</li>
+              </ul>
+            </div>
+          </article>
+      
+          <!-- Right column -->
+          <article class="services-block right-block">
+            <div class = "upper-right">
+              <h3>Architecture</h3>
+              <ul>
+                <li>Conceptual Design</li>
+                <li>Design Development</li>
+                <li>Programming</li>
+                <li>Coordinate Consultants</li>
+                <li>Prepare Permit Set</li>
+              </ul>
+            </div>
+      
+            <div class = "lower-right">
+              <h3>Tenant Improvement</h3>
+              <ul>
+                <li>Interior Design</li>
+                <li>Furnishing and Fixture Selection</li>
+                <li>Interior Architecture</li>
+                <li>Programming and Space Planning</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>      
+      
+      </section>
     </main>
     <!-- Footer stays at bottom if content is short -->
     <footer>
       <p>© LS Architecture LLC. All rights reserved.</p>
     </footer>
+    <script>
+      const hamburger = document.querySelector('.hamburger');
+      const nav = document.querySelector('.main-nav');
+
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        nav.classList.toggle('active');
+      });
+    </script>
   </body>
 </html>

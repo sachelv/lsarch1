@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LS Architecture, LLC.</title>
     <style>
       /* Force html/body to stretch to full screen height */
@@ -20,7 +21,7 @@
         flex: 1 0 auto;
       }
     </style>
-    <link rel="stylesheet" crossorigin href="/assets/style-T9G6DQCQ.css">
+    <link rel="stylesheet" crossorigin href="/assets/style-BCVZrWDX.css">
   </head>
 
   <body>
@@ -29,7 +30,7 @@
       <div class="top-bar">
         <div class="logo-container">
           <img
-            src="/images/LSA Logo.png"
+            src="/images/shared/LSA Logo.png"
             alt="Company Logo"
             class="company-logo"
           />
@@ -38,6 +39,11 @@
           </div>
         </div>
         <nav class="main-nav">
+          <button class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
           <ul>
             <li><a href="index.html">HOME</a></li>
             <li><a href="projects.html">PROJECTS</a></li>
@@ -52,15 +58,38 @@
     <main>
       <!-- For example, in contact.html: -->
       <section class="contact-section">
-        <h2>Contact me at:</h2>
-        <h2>lei@lsarchdesign.com</h2>
-        <h2>702.232.9816</h2>
+        <div class="contact-container">
+          <!-- Left half: background image -->
+          <img
+            src="/images/randglounge/R&G-Flamingo 2.jpg"
+            alt="contact-image"
+            class="left-image"
+          />
+      
+          <!-- Right half: contact info -->
+          <div class="right-content">
+            <h2>Contact Info:</h2>
+            <hr/>
+            <h2>lei@lsarchitecturelv.com</h2>
+            <h2>702.232.9816</h2>
+          </div>
+        </div>
       </section>
+      
     </main>
 
     <!-- Footer stays at bottom if content is short -->
     <footer>
       <p>© LS Architecture LLC. All rights reserved.</p>
     </footer>
+    <script>
+      const hamburger = document.querySelector('.hamburger');
+      const nav = document.querySelector('.main-nav');
+
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        nav.classList.toggle('active');
+      });
+    </script>
   </body>
 </html>
