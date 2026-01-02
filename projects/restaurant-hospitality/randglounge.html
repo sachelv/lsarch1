@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LS Architecture, LLC. - R&G Lounge</title>
+    <link rel="stylesheet" href="/src/style.css" />
+    <style>
+      /* Force html/body to stretch to full screen height */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      /* Use flex layout on body to push footer down if content is short */
+      body {
+        display: flex;
+        flex-direction: column; /* vertical stacking: header, main, footer */
+      }
+      /* The <main> grows/shrinks to fill leftover space, ensuring footer is at bottom */
+      main {
+        flex: 1 0 auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <!-- Your existing header / nav -->
+      <div class="top-bar">
+        <div class="logo-container">
+          <img
+            src="/images/shared/LSA Logo.png"
+            alt="Company Logo"
+            class="company-logo"
+          />
+          <div class="company-name">
+            <h1>LS ARCHITECTURE, LLC.</h1>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <button class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul>
+            <li><a href="../../index.html">HOME</a></li>
+            <li><a href="../../projects.html">PROJECTS</a></li>
+            <li><a href="../../about.html">ABOUT</a></li>
+            <li><a href="../../contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Wrap main content in <main> -->
+    <main>
+      <!-- TWO-COLUMN LAYOUT: Large Slideshow (left) & Vertical Gallery (right) -->
+      <section class="gallery-page-container-2">
+        
+        <!-- LEFT COLUMN: Slideshow & project text -->
+        <div class="left-column-2">
+          
+          <!-- HERO SLIDESHOW (unique classes with -2 suffix) -->
+          <div class="hero-slideshow-2">
+            <div class="hero-slide-container-2">
+              <!-- Slides (use .hero-img-2). Only these 10 belong to the slideshow -->
+              <img src="/images/randglounge/R&G-Entrance.png" alt="Hero 1" class="hero-img-2 active-2" />
+              <img src="/images/randglounge/R&G-Flamingo 1.jpg" alt="Hero 2" class="hero-img-2" />
+              <img src="/images/randglounge/R&G-Flamingo 2.jpg" alt="Hero 3" class="hero-img-2" />
+              <img src="/images/randglounge/R&G-Flamingo 3.jpg" alt="Hero 4" class="hero-img-2" />
+              <img src="/images/randglounge/R&G-Interior1.png" alt="Hero 5" class="hero-img-2" />
+              <img src="/images/randglounge/R&G-Interior2.png" alt="Hero 6" class="hero-img-2" />
+              <img src="/images/randglounge/R&G-Interior3.png" alt="Hero 7" class="hero-img-2" />
+              <img src="/images/randglounge/R&G-Interior4.png" alt="Hero 8" class="hero-img-2" />
+              <img src="/images/randglounge/R&G-Patio1.png" alt="Hero 9" class="hero-img-2" />
+              <img src="/images/randglounge/R&G-Patio2.png" alt="Hero 10" class="hero-img-2" />
+
+              <!-- Navigation arrows (unique classes) -->
+              <button class="slide-arrow-2 left-arrow-2">&#10094;</button>
+              <button class="slide-arrow-2 right-arrow-2">&#10095;</button>
+            </div>
+          </div>
+
+          <!-- PROJECT TEXT BELOW SLIDESHOW -->
+          <div class="gallery-page-text-2">
+            <h1>R&amp;G Lounge</h1>
+            <p class="project-location-2">Las Vegas, NV</p>
+            <hr class="project-divider-2" />
+            <p class="project-description-2">
+            </p>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Vertical scrolling gallery -->
+        <div class="right-column-2">
+          <div class="vertical-gallery-2">
+            <h2>Project Gallery</h2>
+            <hr class="vertical-gallery-divider-2" />
+            <div class="vertical-scroll-container-2">
+              <!-- All images appear here. They do NOT have .hero-img-2. Instead, use a new class. -->
+              <img src="/images/randglounge/R&G-Entrance.png" alt="R&G Entrance" class="vertical-gallery-img-2" />
+              <img src="/images/randglounge/R&G-Flamingo 1.jpg" alt="R&G Flamingo 1" class="vertical-gallery-img-2" />
+              <img src="/images/randglounge/R&G-Flamingo 2.jpg" alt="R&G Flamingo 2" class="vertical-gallery-img-2" />
+              <img src="/images/randglounge/R&G-Flamingo 3.jpg" alt="R&G Flamingo 3" class="vertical-gallery-img-2" />
+              <img src="/images/randglounge/R&G-Interior1.png" alt="R&G Interior1" class="vertical-gallery-img-2" />
+              <img src="/images/randglounge/R&G-Interior2.png" alt="R&G Interior2" class="vertical-gallery-img-2" />
+              <img src="/images/randglounge/R&G-Interior3.png" alt="R&G Interior3" class="vertical-gallery-img-2" />
+              <img src="/images/randglounge/R&G-Interior4.png" alt="R&G Interior4" class="vertical-gallery-img-2" />
+              <img src="/images/randglounge/R&G-Patio1.png" alt="R&G Patio1" class="vertical-gallery-img-2" />
+              <img src="/images/randglounge/R&G-Patio2.png" alt="R&G Patio2" class="vertical-gallery-img-2" />
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </main>
+
+    <footer>
+      <p>© LS Architecture LLC. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // Hamburger (existing)
+      const hamburger = document.querySelector(".hamburger");
+      const nav = document.querySelector(".main-nav");
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        nav.classList.toggle("active");
+      });
+
+      // ====== Slideshow with identical behavior as your index.html hero ======
+      // We create variables for slides, set interval, and clear interval on arrow click
+      const slidesTwo = document.querySelectorAll(".hero-img-2");
+      const leftArrowTwo = document.querySelector(".left-arrow-2");
+      const rightArrowTwo = document.querySelector(".right-arrow-2");
+      let currentIndexTwo = 0;
+
+      // Matches your main hero auto-scroll interval
+      const slideshowIntervalTime = 2000;
+      let autoSlideshowTwo = null;
+
+      function showSlideTwo(index) {
+        slidesTwo.forEach((slide, i) => {
+          slide.classList.remove("active-2");
+          if (i === index) slide.classList.add("active-2");
+        });
+      }
+
+      function nextSlideTwo() {
+        currentIndexTwo++;
+        if (currentIndexTwo >= slidesTwo.length) {
+          currentIndexTwo = 0;
+        }
+        showSlideTwo(currentIndexTwo);
+      }
+
+      // Start the auto slideshow
+      function startAutoSlideshowTwo() {
+        autoSlideshowTwo = setInterval(nextSlideTwo, slideshowIntervalTime);
+      }
+
+      // Stop the auto slideshow
+      function stopAutoSlideshowTwo() {
+        clearInterval(autoSlideshowTwo);
+        autoSlideshowTwo = null;
+      }
+
+      // Listen for arrow clicks
+      leftArrowTwo.addEventListener("click", () => {
+        // Move backward
+        currentIndexTwo--;
+        if (currentIndexTwo < 0) {
+          currentIndexTwo = slidesTwo.length - 1;
+        }
+        showSlideTwo(currentIndexTwo);
+        // Stop auto-scrolling once an arrow is clicked
+        stopAutoSlideshowTwo();
+      });
+
+      rightArrowTwo.addEventListener("click", () => {
+        // Move forward
+        nextSlideTwo();
+        // Stop auto-scrolling once an arrow is clicked
+        stopAutoSlideshowTwo();
+      });
+
+      // Initialize
+      showSlideTwo(currentIndexTwo);
+      startAutoSlideshowTwo(); // auto-scroll starts on page load
+    </script>
+  </body>
+</html>

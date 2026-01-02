@@ -141,7 +141,7 @@ body {
 
 /* Projects Section */
 .projects-section {
-  padding: 30px 20px;
+  padding: 30px 10%;
 }
 
 .projects-section h2 {
@@ -892,7 +892,9 @@ body {
 .project-card {
   text-decoration: none;
   color: inherit;
-  width: 190px;
+  /* 5 cards per row: (100% - 4 gaps of 15px) / 5 */
+  width: calc((100% - 60px) / 5);
+  min-width: 150px;
   position: relative;
   transition: transform 0.2s ease;
 }
@@ -933,14 +935,29 @@ body {
   margin-top: 5px;
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for project cards */
+@media (max-width: 1200px) {
+  .project-card {
+    /* 4 cards per row on medium screens */
+    width: calc((100% - 45px) / 4);
+  }
+}
+
+@media (max-width: 900px) {
+  .project-card {
+    /* 3 cards per row on smaller screens */
+    width: calc((100% - 30px) / 3);
+  }
+}
+
 @media (max-width: 768px) {
   .project-row {
     justify-content: center;
   }
   
   .project-card {
-    width: 160px;
+    /* 2 cards per row on tablet */
+    width: calc((100% - 15px) / 2);
   }
   
   .main-nav ul {
@@ -954,7 +971,9 @@ body {
   }
   
   .project-card {
-    width: 140px;
+    /* 2 cards per row on mobile, slightly smaller */
+    width: calc((100% - 15px) / 2);
+    min-width: 120px;
   }
 }
 
